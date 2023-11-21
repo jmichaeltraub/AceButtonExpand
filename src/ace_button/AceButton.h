@@ -27,6 +27,7 @@ SOFTWARE.
 
 #include <Arduino.h>
 #include "ButtonConfig.h"
+#include <clsPCA9555.h>
 
 namespace ace_button {
 
@@ -299,6 +300,8 @@ class AceButton {
      * correctly, which may cause other event detection algorithms to fail.
      */
     void check();
+    void check(PCA9555* ioExpander);
+
 
     /**
      * Version of check() used by EncodedButtonConfig. NOT for public

@@ -118,6 +118,13 @@ void AceButton::check() {
   checkState(buttonState);
 }
 
+// NOTE: It would be interesting to rewrite the check() method using a Finite
+// State Machine.
+void AceButton::check(PCA9555* ioExpander) {
+  uint8_t buttonState = mButtonConfig->readButton(mPin);
+  checkState(buttonState);
+}
+
 void AceButton::checkState(uint8_t buttonState) {
   // Retrieve the current time just once and use that in the various checkXxx()
   // functions below. This provides some robustness of the various timing

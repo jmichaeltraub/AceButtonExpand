@@ -318,6 +318,10 @@ class ButtonConfig {
       return digitalRead(pin);
     }
 
+    virtual int readButton(uint8_t pin, PCA9555* ioExpander) {
+      return ioExpander->digitalRead(pin);
+    }
+
     // These methods provide access to various feature flags that control the
     // functionality of the AceButton.
 
