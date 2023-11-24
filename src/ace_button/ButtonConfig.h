@@ -27,6 +27,7 @@ SOFTWARE.
 
 #include <Arduino.h>
 #include "IEventHandler.h"
+#include <clsPCA9555.h>
 
 // https://stackoverflow.com/questions/295120
 #if defined(__GNUC__) || defined(__clang__)

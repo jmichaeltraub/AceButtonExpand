@@ -121,7 +121,7 @@ void AceButton::check() {
 // NOTE: It would be interesting to rewrite the check() method using a Finite
 // State Machine.
 void AceButton::check(PCA9555* ioExpander) {
-  uint8_t buttonState = mButtonConfig->readButton(mPin);
+  uint8_t buttonState = mButtonConfig->readButton(mPin, ioExpander);
   checkState(buttonState);
 }
 
